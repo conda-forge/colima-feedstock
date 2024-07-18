@@ -6,8 +6,11 @@ go build -buildmode=pie -trimpath -o=${PREFIX}/bin/${PKG_NAME} -ldflags="-s -w" 
 mkdir -p ${PREFIX}/etc/bash_completion.d
 mkdir -p ${PREFIX}/share/zsh/site-functions
 mkdir -p ${PREFIX}/share/fish/vendor_completions.d
+
+if [[ ${build_platform} == ${target_platform} ]]; then
 colima completion bash > ${PREFIX}/etc/bash_completion.d/lima
 colima completion zsh > ${PREFIX}/share/zsh/site-functions/_lima
 colima completion fish > ${PREFIX}/share/fish/vendor_completions.d/lima.fish
+fi
 
 go-licenses save ./cmd/colima --save_path=license-files
