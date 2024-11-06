@@ -1,5 +1,5 @@
 {% set name = "colima" %}
-{% set version = "0.6.9" %}
+{% set version = "0.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/abiosoft/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 97e04f0f28effcf519d76e5307a14e5d87da038946be0da980d9d7c9d95b3c11
+  sha256: 452a00453f8c396efbd156e45b61514ae30b4adc3ca1faa634d3e1db77d25f93
 
 build:
   number: 0
@@ -26,7 +26,7 @@ test:
 about:
   home: https://github.com/abiosoft/{{ name }}
   license: MIT
-  license_file: 
+  license_file:
     - LICENSE
     - license-files/
   summary: Container runtimes on MacOS (and Linux) with minimal setup
