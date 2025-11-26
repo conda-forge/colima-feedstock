@@ -1,0 +1,39 @@
+schema_version: 1
+
+context:
+  version: 0.9.1
+
+package:
+  name: colima
+  version: ${{ version }}
+
+source:
+  url: https://github.com/abiosoft/colima/archive/v${{ version }}.tar.gz
+  sha256: 1fe95da6dbe584783e2ae521759aaacd3ba52bd6c44632f95b5adc0d97345460
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - ${{ compiler('go-nocgo') }}
+    - go-licenses
+  run:
+    - lima-vm
+
+tests:
+  - script:
+      - colima --help
+
+about:
+  license: MIT
+  license_file:
+    - LICENSE
+    - license-files/
+  summary: Container runtimes on MacOS (and Linux) with minimal setup
+  homepage: https://github.com/abiosoft/colima
+  repository: https://github.com/abiosoft/colima
+
+extra:
+  recipe-maintainers:
+    - danielnachun
