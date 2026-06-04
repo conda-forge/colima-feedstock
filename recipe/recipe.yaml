@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.10.2"
+  version: "0.10.3"
 
 package:
   name: colima
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/abiosoft/colima/archive/v${{ version }}.tar.gz
-  sha256: 595f4ed25316f7de2896939bfd78cf419b13807c05705e7ba658fbcc7eaf60bf
+  sha256: 7aa687a4905c42de18d397ef45e9fc37ace08641c0ac2e4bcc9d9a67a5be97fe
 
 build:
   number: 0
